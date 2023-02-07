@@ -1,0 +1,117 @@
+body {
+    background-color:white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    
+    
+    min-width: 350px;
+    width: auto;
+    max-width: 450px;
+    
+    
+    height: 470px;
+    
+    margin: 0 auto; 
+    margin-top: 5vw;
+    /*
+    margin: 0 auto; 
+    position: absolute;
+    top: 50%;
+    
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+    */
+    
+    
+    
+   
+}
+
+
+.center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.container img {
+    margin-top: 2.5vw;
+    margin-bottom: 0.5vw;
+    
+}
+
+#Goole-title {
+    color: #202124;
+    font-weight: 400;
+    margin-top: 8px;
+    font-size: x-large;
+    font: "Google Sans";
+    letter-spacing: -0.8px;
+
+}
+
+.Google-text {
+    
+    font-size: 16px;
+    margin-top: -10px;
+    color: rgba(0, 0, 0, 0.9);
+    letter-spacing: -0.8px;
+}
+
+
+
+
+.signin {
+    outline:none;
+    padding: 1em;
+    font-size:medium;
+    width: 70%;
+    text-align: left;
+    border-radius: 5px;
+    border-style: solid;
+
+}
+
+.signin:focus {
+    border-color: #1A73E8;
+}
+
+.info-text {
+    color: #777a7f;
+    font-size: small;
+    letter-spacing: -0.8px;
+}
+
+#Learn-More {
+    margin-top: -0.5em;
+
+}
+
+.passwordInput {
+    margin-top:2.5em;
+}
+
+.password-checkbox {
+    float:left;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    border-color: rgd(187, 187, 187);
+}
+
+.password-checkbox-text {
+    
+    float:left;
+    margin-top: 12px;
+    margin-left: 13px;
+    font-size: 88%;
+}

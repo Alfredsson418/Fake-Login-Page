@@ -1,0 +1,15 @@
+.flash-invalid {
+    color:white;
+    font-weight: 800;
+    width: 400px;
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0;
+
+}

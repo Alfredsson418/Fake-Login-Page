@@ -1,0 +1,66 @@
+.nextButton {
+    padding: 12px;
+    margin-left: 20% ;
+    width: 80px;
+    background-color: #1A73E8;
+    border-radius: 5px;
+    border: none;
+    color: antiquewhite;
+    font-weight: 800;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.Google-link {
+    color: #1A73E8;  
+    font-weight: 600;
+    float: left;
+    margin-top: 0.5em;
+    margin-left: -4px;
+    background-color: transparent;
+    border: none;
+    font-weight:800;
+    font-size:14px;
+
+}
+
+
+.Google-link:active {
+    background-color: #8cbaf7;
+    border-radius: 5px;
+}
+
+
+#create-account {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.new-line {
+    margin-top: 5em;
+}
+
+
+#Google-Email {
+    color: rgb(66, 66, 66);
+    background-color: transparent;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    border: 0.3px solid rgb(187, 187, 187);
+    border-radius: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    font-size: 80%;
+}
+
+#Google-Email:hover {
+    background-color: rgb(243, 243, 243);
+}

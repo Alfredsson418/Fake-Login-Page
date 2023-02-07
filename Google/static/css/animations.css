@@ -1,0 +1,17 @@
+.signInElements {
+    position: relative;
+}
+
+.muted {
+    opacity: 0.5;
+}
+
+.passwordElements {
+    position: relative;
+}
+
+
+.hidden {
+    display: none;
+}
+

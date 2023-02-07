@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>SML-Publikt</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<div class="inner cover">
+					<img src="{{ url_for('static', filename='images/captiveportal-logga.jpg') }}">
+					<h1 class="cover-heading">Välkommen till SML-Publikt inloggningssida</h1>
+					<p class="lead">Här kan du logga in med ditt AD-konto eller en engångsbiljett för att få tillgång
+						till Internet.</p>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<form method="POST" action="" class="form-horizontal" novalidate>
+								{{ form.hidden_tag() }}
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<label class="col-sm-2 control-label">Användarnamn:</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										{{ form.email(class="form-control input-lg", placeholder="Användarnamn",
+										id="auth_user") }}
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<label class="col-sm-2 control-label">Lösenord:</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										{{ form.password(class="form-control input-lg", placeholder="Lösenord",
+										id="auth_pass") }}
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										{{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<form method="POST" action="" class="form-horizontal" novalidate>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<label class="col-sm-2 control-label">Engångsbiljett:</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										{{ ticket.code(class="form-control input-lg", placeholder="Biljett-kod") }}
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										{{ ticket.submit(class="btn btn-lg btn-block btn-primary") }}
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="terms">
+					<img src="{{ url_for('static', filename='images/captiveportal-itsupport.jpg') }}">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
