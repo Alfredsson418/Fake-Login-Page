@@ -17,4 +17,7 @@ I do not own any of there brands, and the idea was not to do anything bad to the
 I also do not condone any bad behavior on the internet, including using these websites for real life phishing attacks or any other type of attacks.
 
 
-[^1]: I do not condone any bad behavior on the internet, including using these websites for real life phishing attacks or any other type of attacks.
+
+
+
+[^1]: I do not condone any bad behavior on the internet, including using these websites for real life phishing attacks.
